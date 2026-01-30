@@ -21,7 +21,7 @@ Systemd-Doctor is an advanced, automated framework designed for deep-level analy
 The tool is engineered with a modular Python architecture and operates within a PEP 668 compliant virtual environment to ensure 100% isolation from system packages.
 
 ### Installation
-- git clone https://github.com/yourusername/Systemd-Doctor.git
+- git clone https://github.com/zuhtuEren/Systemd-Doctor.git
 - cd Systemd-Doctor
 - bash setup.sh
 
