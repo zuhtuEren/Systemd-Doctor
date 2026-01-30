@@ -1,0 +1,13 @@
+# Python gereksizleri
+__pycache__/
+*.py[cod]
+
+# Kişisel sistem yedeklerin (Başkası senin snapshot'larını görmesin)
+snapshots/*.json
+
+# Sanal ortam
+venv/
+.venv/
+
+# Sistem dosyaları
+.DS_Store
