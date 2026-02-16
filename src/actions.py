@@ -55,9 +55,9 @@ def disable_selected_services(selected, all_s):
 def restore_snapshot(target):
     if not target: return
     
-    # Akilli yol kontrolü:
-    # 1. Kullanicinin girdigi yolu direkt dene
-    # 2. Olmazsa snapshots/ klasörü altinda dene
+    # Smart path check:
+    # 1. Try the user-provided path directly
+    # 2. If that fails, try under the snapshots/ folder
     actual_path = target
     if not os.path.exists(actual_path):
         actual_path = os.path.join(SNAPSHOT_DIR, target)

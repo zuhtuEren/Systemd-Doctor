@@ -48,7 +48,7 @@ def main():
     if args.restore:
         snaps = []
         if os.path.exists(SNAPSHOT_DIR):
-            # ctime yerine mtime (modification time) kullanıldı, Linux için daha güvenilir.
+            # Used mtime (modification time) instead of ctime, more reliable for Linux.
             snaps = sorted([os.path.join(SNAPSHOT_DIR, f) for f in os.listdir(SNAPSHOT_DIR) if f.startswith("snapshot_")], 
                            key=os.path.getmtime, reverse=True)
         
@@ -57,12 +57,12 @@ def main():
                 print("[ERROR] No snapshots available. Perform an optimization first.")
                 return
             
-            # Seçim menüsünü çağır
+            # Call the selection menu
             selected = interactive_restore_menu(snaps)
             if selected:
                 restore_snapshot(selected)
         else:
-            # Belirtilen dosyayı yükle
+            # Load the specified file
             restore_snapshot(args.restore)
         return
 
